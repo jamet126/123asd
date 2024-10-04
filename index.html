@@ -7,60 +7,23 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-color: #f8f9fa; /* Light grey background for contrast */
+            background-image: url('https://images.pexels.com/photos/952670/pexels-photo-952670.jpeg?auto=compress&cs=tinysrgb&w=600');
+            background-size: cover; 
+            background-position: center; 
             color: #333;
             line-height: 1.6;
         }
-        h1 {
-            color: #ff0000; /* Red for main heading */
+        header {
             text-align: center;
-            margin-top: 20px;
-        }
-        h2 {
-            color: #dc3545; /* Bootstrap's primary red */
-            text-align: center;
-        }
-        nav {
-            margin-bottom: 20px;
-        }
-        .navbar-default {
-            background-color: #ffffff; /* White background for the navbar */
-            border-color: #e7e7e7;
-        }
-        .navbar-nav > li > a {
-            color: #dc3545; /* Red for navbar links */
-        }
-        .navbar-nav > li > a:hover {
-            background-color: #dc3545; /* Red background on hover */
-            color: #ffffff; /* White text on hover */
+            color: red;
+            margin: 20px 0;
         }
         section {
-            background-color: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+            background-color: rgba(255, 255, 255, 0.8);
             padding: 20px;
-            margin: 20px;
+            margin: 20px 0;
             border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #ffffff;
-            color: #dc3545;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-        .btn-primary {
-            background-color: #dc3545; /* Red button */
-            border-color: #dc3545;
-        }
-        .btn-primary:hover {
-            background-color: #c82333; /* Darker red on hover */
-            border-color: #bd2131;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
@@ -71,14 +34,10 @@
                 <a class="navbar-brand" href="#">Perpustakaan INKES</a>
             </div>
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#video">Video</a></li>
-                <li><a href="#audio">Audio</a></li>
-                <li><a href="#order">Order</a></li>
-                <li><a href="#extend">Extend</a></li>
-                <li><a href="#members">Members</a></li>
+                <li class="active"><a href="#about">About</a></li>
+                <li><a href="#media">Media</a></li>
+                <li><a href="#forms">Forms</a></li>
+                <li><a href="#books">Books</a></li>
             </ul>
         </div>
     </nav>
@@ -88,35 +47,29 @@
         <h2>Selamat Datang di Web Perpustakaan INKES</h2>
     </header>
 
-    <main>
+    <main class="container">
         <section id="about">
             <h3>PERPUSTAKAAN INKES</h3>
             <p>Perkenalkan, saya Zefanya Rohdearmantuah Purba NIM 222201032. Ini adalah perpustakaan <i>homepage</i> <b>pertama</b> saya, karena saya baru belajar tentang cara membuat <b><i><a href="https://www.inkessumut.ac.id/">website perpustakaan INKES</a></i></b>. Selamat menjelajahi!</p>
         </section>
 
-        <section id="gallery">
-            <h3>Gambar Gedung Perpustakaan INKES</h3>
-            <center><img src="picture/WhatsApp Image 2024-09-13 at 13.21.02.jpeg" alt="Gedung Perpustakaan INKES" class="img-responsive"></center>
+        <section id="media">
+            <h3>Gambar Gedung, Video, dan Audio Perpustakaan INKES</h3>
+            <div class="text-center">
+                <img src="picture/WhatsApp Image 2024-09-13 at 13.21.05.jpeg" alt="Gedung Perpustakaan INKES" class="img-responsive" style="max-width: 100%; height: auto;">
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/FnMMoTzvWaw" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                <h4>BOB MARLEY - HOW MANY TIMES</h4>
+                <audio controls>
+                    <source src="music/How_Many_Times_[_YouConvert.net_].mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
         </section>
 
-        <section id="video">
-            <h3>Video Perpustakaan INKES</h3>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/FnMMoTzvWaw" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-        </section>
-
-        <section id="audio">
-            <h3>Audio Perpustakaan</h3>
-            <h4>BOB MARLEY - HOW MANY TIMES</h4>
-            <audio controls>
-                <source src="music/How_Many_Times_[_YouConvert.net_].mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
-        </section>
-
-        <section id="order">
-            <h2>Formulir Pemesanan Buku</h2>
+        <section id="forms">
+            <h2>Formulir Pemesanan dan Perpanjangan Peminjaman Buku</h2>
             <form>
-                <table class="table">
+                <table class="table table-bordered">
                     <tr>
                         <td>Nama Lengkap:</td>
                         <td><input type="text" class="form-control" /></td>
@@ -161,68 +114,15 @@
                     </tr>
                     <tr>
                         <td colspan="2">
-                            <input type="submit" name="submit" value="Kirim" class="btn btn-primary" />
+                            <button type="submit" class="btn btn-primary">Kirim</button>
                         </td>
                     </tr>
                 </table>
             </form>
-        </section>
 
-        <section id="extend">
-            <h2>Formulir Perpanjangan Peminjaman Buku</h2>
-            <form>
-                <table class="table">
-                    <tr>
-                        <td>Nama Lengkap:</td>
-                        <td><input type="text" class="form-control" /></td>
-                    </tr>
-                    <tr>
-                        <td>Nomor Anggota Perpustakaan:</td>
-                        <td><input type="password" class="form-control" /></td>
-                    </tr>
-                    <tr>
-                        <td>e-mail:</td>
-                        <td><input type="email" class="form-control" name="email" placeholder="@gmail.com" /></td>
-                    </tr>
-                    <tr>
-                        <th colspan="2">Detail Pemesanan Awal</th>
-                    </tr>
-                    <tr>
-                        <td>Judul Buku Yang Dipesan:</td>
-                        <td><input type="text" class="form-control" name="Judul Buku" /></td>
-                    </tr>
-                    <tr>
-                        <td>Penulis Buku:</td>
-                        <td><input type="text" class="form-control" name="Penulis Buku" /></td>
-                    </tr>
-                    <tr>
-                        <td>Nomor ISBN:</td>
-                        <td><input type="number" class="form-control" name="Nomor ISBN" /></td>
-                    </tr>
-                    <tr>
-                        <th colspan="2">Perpanjangan Peminjaman Buku</th>
-                    </tr>
-                    <tr>
-                        <td>Tanggal Perpanjangan Peminjaman Buku:</td>
-                        <td><input type="date" class="form-control" name="Tanggal Perpanjang Peminjaman Buku" /></td>
-                    </tr>
-                    <tr>
-                        <td>Alasan Perpanjangan:</td>
-                        <td><input type="text" class="form-control" name="Alasan Perpanjangan" /></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <input type="submit" name="submit" value="Kirim" class="btn btn-primary" />
-                        </td>
-                    </tr>
-                </table>
-            </form>
-        </section>
-
-        <section id="members">
             <h2>Formulir Anggota Perpustakaan Program Studi</h2>
             <form>
-                <table class="table">
+                <table class="table table-bordered">
                     <tr>
                         <td>Nama Lengkap:</td>
                         <td><input type="text" class="form-control" /></td>
@@ -260,17 +160,77 @@
                     </tr>
                     <tr>
                         <td colspan="2">
-                            <input type="submit" value="Daftar" class="btn btn-primary" />
+                            <button type="submit" class="btn btn-primary">Daftar</button>
                         </td>
                     </tr>
                 </table>
             </form>
         </section>
 
-        <footer>
-            <p>&copy; 2024 Perpustakaan INKES</p>
-        </footer>
+        <section id="books">
+            <h2>Tabel Bahan Buku</h2>
+            <table class="table table-bordered">
+                <tr>
+                    <th>No.</th>
+                    <th>Judul Buku</th>
+                    <th>Pengarang</th>
+                    <th>Penerbit</th>
+                    <th>Tahun Terbit</th>
+                    <th>Jumlah Halaman</th>
+                    <th>ISBN</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>"ILMU BEDAH UNTUK PERAWAT"</td>
+                    <td>M.A HENDERSON</td>
+                    <td>YAYASAN ESSENTIA MEDICA</td>
+                    <td>1997</td>
+                    <td>290</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>"Buku Saku Ilmu Penyakit Paru"</td>
+                    <td>Halim Danususanto</td>
+                    <td>Penerbit Buku Kedokteran</td>
+                    <td>2010</td>
+                    <td>335</td>
+                    <td>978-979-044-256-6</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>"Urologic Disorders"</td>
+                    <td>Mikel Gray</td>
+                    <td>Morgan Kaufmann Publisher</td>
+                    <td>2009</td>
+                    <td>506</td>
+                    <td>978-0-323-01912-5</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>"Buku Ajar Panthom Obstetri"</td>
+                    <td>Ida Bagus Gede Manuba</td>
+                    <td>Touchstone Book</td>
+                    <td>2010</td>
+                    <td>131</td>
+                    <td>978-602-8200-88-2</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>"Endokrinologi Umum"</td>
+                    <td>Turner</td>
+                    <td>Airlangga University Pres</td>
+                    <td>1988</td>
+                    <td>746</td>
+                    <td>-</td>
+                </tr>
+            </table>
+        </section>
     </main>
+
+    <footer class="text-center">
+        <p>&copy; 2024 Perpustakaan INKES</p>
+    </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
