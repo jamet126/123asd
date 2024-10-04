@@ -23,13 +23,12 @@
 
     <main class="container mt-4">
         <div class="row">
-            <!-- Kolom 1: Ucapan Selamat Datang -->
+            <!-- Kolom I -->
             <div class="col-md-4">
-                <h3>Selamat Datang di Website Perpustakaan</h3>
-                <p>SUKA BACA</p>
+                <h3>Selamat Datang di Website Perpustakaan SUKA BACA</h3>
             </div>
 
-            <!-- Kolom 2: Tabel -->
+            <!-- Kolom II -->
             <div class="col-md-4">
                 <h3>Tabel Bahan Buku</h3>
                 <table class="table table-bordered">
@@ -94,26 +93,21 @@
                 </table>
             </div>
 
-            <!-- Kolom 3: Form -->
+            <!-- Kolom III -->
             <div class="col-md-4">
-                <h3>Formulir Pendaftaran Anggota</h3>
+                <h3>Formulir Pendaftaran</h3>
                 <form>
-                    <div class="mb-3">
-                        <label for="nama" class="form-label">Nama Lengkap:</label>
-                        <input type="text" class="form-control" id="nama" required>
+                    <div class="form-group">
+                        <label for="namaLengkap">Nama Lengkap:</label>
+                        <input type="text" class="form-control" id="namaLengkap" required>
                     </div>
-                    <div class="mb-3">
-                        <label for="nim" class="form-label">Nomor Induk Mahasiswa (NIM):</label>
-                        <input type="text" class="form-control" id="nim" required>
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" class="form-control" id="email" placeholder="@gmail.com" required>
                     </div>
-                    <div class="mb-3">
-                        <label for="prodi" class="form-label">Program Studi:</label>
-                        <select class="form-select" id="prodi">
-                            <option value="S1 Kesmas">Ilmu Perpustakaan</option>
-                            <option value="S1 Keperawatan">Informatika</option>
-                            <option value="Profesi Ners">Manajemen</option>
-                            <option value="S1 Kebidanan">Akuntansi</option>
-                        </select>
+                    <div class="form-group">
+                        <label for="nomorTelepon">Nomor Telepon:</label>
+                        <input type="tel" class="form-control" id="nomorTelepon" placeholder="+62..." required>
                     </div>
                     <button type="submit" class="btn btn-primary">Daftar</button>
                 </form>
@@ -121,7 +115,7 @@
         </div>
     </main>
 
-    <footer class="text-center mt-4">
+    <footer>
         <p>&copy; 2024 Perpustakaan INKES</p>
     </footer>
     <script src="js/bootstrap.min.js"></script>
