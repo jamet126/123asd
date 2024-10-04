@@ -4,17 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Perpustakaan INKES</title>
-     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-image: url('https://images.pexels.com/photos/952670/pexels-photo-952670.jpeg?auto=compress&cs=tinysrgb&w=600');
-            background-size: cover; 
-            background-position: center; 
+            background-color: #f8f9fa; /* Light grey background for contrast */
             color: #333;
             line-height: 1.6;
         }
         h1 {
-            color: red;
+            color: #ff0000; /* Red for main heading */
+            text-align: center;
+            margin-top: 20px;
+        }
+        h2 {
+            color: #dc3545; /* Bootstrap's primary red */
+            text-align: center;
+        }
+        nav {
+            margin-bottom: 20px;
+        }
+        .navbar-default {
+            background-color: #ffffff; /* White background for the navbar */
+            border-color: #e7e7e7;
+        }
+        .navbar-nav > li > a {
+            color: #dc3545; /* Red for navbar links */
+        }
+        .navbar-nav > li > a:hover {
+            background-color: #dc3545; /* Red background on hover */
+            color: #ffffff; /* White text on hover */
+        }
+        section {
+            background-color: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+            padding: 20px;
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            color: #dc3545;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .btn-primary {
+            background-color: #dc3545; /* Red button */
+            border-color: #dc3545;
+        }
+        .btn-primary:hover {
+            background-color: #c82333; /* Darker red on hover */
+            border-color: #bd2131;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
         }
     </style>
 </head>
@@ -50,7 +96,7 @@
 
         <section id="gallery">
             <h3>Gambar Gedung Perpustakaan INKES</h3>
-            <center><img src="picture/WjhatsApp Image 2024-09-13 at 13.21.02.jpeg" alt="Gedung Perpustakaan INKES" class="img-responsive"></center>
+            <center><img src="picture/WhatsApp Image 2024-09-13 at 13.21.05.jpeg" alt="Gedung Perpustakaan INKES" class="img-responsive"></center>
         </section>
 
         <section id="video">
@@ -76,7 +122,7 @@
                         <td><input type="text" class="form-control" /></td>
                     </tr>
                     <tr>
-                        <td>Nomor Anggota Perpustkaan:</td>
+                        <td>Nomor Anggota Perpustakaan:</td>
                         <td><input type="password" class="form-control" /></td>
                     </tr>
                     <tr>
