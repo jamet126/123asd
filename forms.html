@@ -1,1 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Forms - Perpustakaan INKES</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Perpustakaan INKES</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="media.html">Media</a></li>
+                    <li class="active"><a href="forms.html">Forms</a></li>
+                    <li><a href="books.html">Books</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="container">
+        <section>
+            <h2>Formulir Pemesanan dan Perpanjangan Peminjaman Buku</h2>
+            <form>
+                <table class="table table-bordered">
+                    <tr>
+                        <td>Nama Lengkap:</td>
+                        <td><input type="text" class="form-control" /></td>
+                    </tr>
+                    <tr>
+                        <td>Nomor Anggota Perpustakaan:</td>
+                        <td><input type="password" class="form-control" /></td>
+                    </tr>
+                    <tr>
+                        <td>e-mail:</td>
+                        <td><input type="email" class="form-control" name="email" placeholder="@gmail.com" /></td>
+                    </tr>
+                    <tr>
+                        <td>Nomor Telepon:</td>
+                        <td><input type="number" class="form-control" name="Nomor Telepon" placeholder="+62..." /></td>
+                    </tr>
+                    <tr>
+                        <td>Jenis Kelamin:</td>
+                        <td>
+                            <label><input type="radio" name="jenis_kelamin" value="laki-laki" /> Laki-laki</label>
+                            <label><input type="radio" name="jenis_kelamin" value="perempuan" /> Perempuan</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">Detail Pemesanan</th>
+                    </tr>
+                    <tr>
+                        <td>Judul Buku Yang Dipesan:</td>
+                        <td><input type="text" class="form-control" name="Judul Buku" /></td>
+                    </tr>
+                    <tr>
+                        <td>Penulis Buku:</td>
+                        <td><input type="text" class="form-control" name="Penulis Buku" /></td>
+                    </tr>
+                    <tr>
+                        <td>Nomor ISBN:</td>
+                        <td><input type="number" class="form-control" name="Nomor ISBN" /></td>
+                    </tr>
+                    <tr>
+                        <td>Tanggal Pemesanan:</td>
+                        <td><input type="date" class="form-control" name="Tanggal Pemesanan" /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <button type="submit" class="btn btn-danger">Kirim</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
 
+            <h2>Formulir Anggota Perpustakaan Program Studi</h2>
+            <form>
+                <table class="table table-bordered">
+                    <tr>
+                        <td>Nama Lengkap:</td>
+                        <td><input type="text" class="form-control" /></td>
+                    </tr>
+                    <tr>
+                        <td>Nomor Induk Mahasiswa (NIM):</td>
+                        <td><input type="text" class="form-control" name="NIM" /></td>
+                    </tr>
+                    <tr>
+                        <td>Program Studi:</td>
+                        <td>
+                            <select name="prodi" class="form-control">
+                                <option value="S1 Kesmas">Ilmu Perpustakaan</option>
+                                <option value="S1 Keperawatan">Informatika</option>
+                                <option value="Profesi Ners">Manajemen</option>
+                                <option value="S1 Kebidanan">Akuntansi</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Fakultas:</td>
+                        <td><input type="text" class="form-control" name="fakultas" /></td>
+                    </tr>
+                    <tr>
+                        <td>Alamat Rumah:</td>
+                        <td><input type="text" class="form-control" name="alamat" /></td>
+                    </tr>
+                    <tr>
+                        <td>e-mail:</td>
+                        <td><input type="email" class="form-control" name="email" placeholder="@gmail.com" /></td>
+                    </tr>
+                    <tr>
+                        <td>Nomor Telepon:</td>
+                        <td><input type="number" class="form-control" name="telepon" placeholder="+62..." /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <button type="submit" class="btn btn-danger">Daftar</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Perpustakaan INKES</p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
