@@ -7,7 +7,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background-image: url('https://img.freepik.com/free-photo/blue-acrylic-texture-background_53876-101912.jpg?uid=R166787732&ga=GA1.1.GA1.1.1628544991.1728095381&semt=ais_hybrid');
+            background-image: url('https://img.freepik.com/free-photo/blue-acrylic-texture-background_53876-101912.jpg?ga=GA1.1.1628544991.1728095381&semt=ais_hybrid');
             background-size: cover; 
             background-position: center; 
             color: #333;
@@ -18,26 +18,28 @@
             color: red;
             margin: 20px 0;
         }
-        .welcome-section {
-    background-image: url('picture/freepik-export-20241005031429rQ8R.jpeg'); /* Ganti dengan URL gambar yang diinginkan */
-    background-size: cover; /* Mengatur gambar untuk menutupi seluruh area */
-    background-position: center; /* Memusatkan gambar */
-    padding: 20px;
-    min-height: 300px;
-    border-radius: 10px;
-    text-align: center;
-    color: white; /* Mengubah warna teks menjadi putih agar lebih kontras */
-}
-
-.welcome-section h1 {
-    color: white; /* Mengubah warna teks h1 menjadi putih */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Efek bayangan */
-}
-
-.welcome-section p {
-    color: #ff0000; /* Tetap merah untuk paragraf */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Efek bayangan */
-}
+        section {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        h2 {
+            color: #d9534f;
+        }
+        footer {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .img-responsive {
+            max-width: 100%; 
+            height: auto; 
+            margin: 10px 0;
+        }
     </style>
 </head>
 <body>
@@ -57,13 +59,13 @@
             </div>
         </div>
     </nav>
-    <header>
+    <header style="background-image: url('picture/freepik-export-20241005031429rQ8R.jpeg'); background-size: cover; background-position: center; padding: 80px 0; color: white;">
     <div class="welcome-section">
-        <h1>Perpustakaan INKES</h1>
-        <p>Selamat datang di WEB Perpustakaan INKES</p>
+        <h1 class="display-2" style="text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7); transition: text-shadow 0.3s;">Perpustakaan INKES</h1>
+        <h2 class="lead" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); transition: text-shadow 0.3s;">Selamat Datang di Web Perpustakaan INKES</h2>
     </div>
 </header>
-    <footer>
+    <footer class="text-center">
         <p>&copy; 2024 Perpustakaan INKES</p>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
