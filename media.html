@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Perpustakaan INKES - Media</title>
+    <title>Perpustakaan INKES - Forms</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -124,18 +124,109 @@
     </nav>
     <header style="background-image: url('picture/freepik-export-20241005031429rQ8R.jpeg'); background-size: cover; background-position: center; padding: 80px 0; color: white;">
         <div class="container text-center">
-            <h1 class="display-2" style="text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);">Media Perpustakaan INKES</h1>
+            <h1 class="display-2" style="text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);">Forms Perpustakaan INKES</h1>
         </div>
     </header>
     <main class="container">
-        <section id="media">
-            <h3>Media</h3>
-            <center><img src="picture/WhatsApp Image 2024-09-13 at 13.21.05.jpeg" alt="Gedung Perpustakaan INKES" class="img-responsive"></center>
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/FnMMoTzvWaw" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-            <h4>BOB MARLEY - HOW MANY TIMES</h4>
-            <audio controls>
-                <source src="music/How_Many_Times_[_YouConvert.net_].mp3" type="audio/mpeg">
-            </audio>
+        <section id="forms">
+            <h2>Formulir Pemesanan dan Perpanjangan Peminjaman Buku</h2>
+            <form>
+                <table class="table table-bordered">
+                    <tr>
+                        <td>Nama Lengkap:</td>
+                        <td><input type="text" class="form-control" /></td>
+                    </tr>
+                    <tr>
+                        <td>Nomor Anggota Perpustakaan:</td>
+                        <td><input type="password" class="form-control" /></td>
+                    </tr>
+                    <tr>
+                        <td>e-mail:</td>
+                        <td><input type="email" class="form-control" name="email" placeholder="@gmail.com" /></td>
+                    </tr>
+                    <tr>
+                        <td>Nomor Telepon:</td>
+                        <td><input type="number" class="form-control" name="Nomor Telepon" placeholder="+62..." /></td>
+                    </tr>
+                    <tr>
+                        <td>Jenis Kelamin:</td>
+                        <td>
+                            <label><input type="radio" name="jenis_kelamin" value="laki-laki" /> Laki-laki</label>
+                            <label><input type="radio" name="jenis_kelamin" value="perempuan" /> Perempuan</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">Detail Pemesanan</th>
+                    </tr>
+                    <tr>
+                        <td>Judul Buku Yang Dipesan:</td>
+                        <td><input type="text" class="form-control" name="Judul Buku" /></td>
+                    </tr>
+                    <tr>
+                        <td>Penulis Buku:</td>
+                        <td><input type="text" class="form-control" name="Penulis Buku" /></td>
+                    </tr>
+                    <tr>
+                        <td>Nomor ISBN:</td>
+                        <td><input type="number" class="form-control" name="Nomor ISBN" /></td>
+                    </tr>
+                    <tr>
+                        <td>Tanggal Pemesanan:</td>
+                        <td><input type="date" class="form-control" name="Tanggal Pemesanan" /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <button type="submit" class="btn btn-danger">Kirim</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+
+            <h2>Formulir Anggota Perpustakaan Program Studi</h2>
+            <form>
+                <table class="table table-bordered">
+                    <tr>
+                        <td>Nama Lengkap:</td>
+                        <td><input type="text" class="form-control" /></td>
+                    </tr>
+                    <tr>
+                        <td>Nomor Induk Mahasiswa (NIM):</td>
+                        <td><input type="text" class="form-control" name="NIM" /></td>
+                    </tr>
+                    <tr>
+                        <td>Program Studi:</td>
+                        <td>
+                            <select name="prodi" class="form-control">
+                                <option value="S1 Kesmas">Ilmu Perpustakaan</option>
+                                <option value="S1 Keperawatan">Informatika</option>
+                                <option value="Profesi Ners">Manajemen</option>
+                                <option value="S1 Kebidanan">Akuntansi</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Fakultas:</td>
+                        <td><input type="text" class="form-control" name="fakultas" /></td>
+                    </tr>
+                    <tr>
+                        <td>Alamat Rumah:</td>
+                        <td><input type="text" class="form-control" name="alamat" /></td>
+                    </tr>
+                    <tr>
+                        <td>e-mail:</td>
+                        <td><input type="email" class="form-control" name="email" placeholder="@gmail.com" /></td>
+                    </tr>
+                    <tr>
+                        <td>Nomor Telepon:</td>
+                        <td><input type="number" class="form-control" name="telepon" placeholder="+62..." /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <button type="submit" class="btn btn-danger">Daftar</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
         </section>
     </main>
     <footer class="text-center">
