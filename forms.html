@@ -231,6 +231,59 @@
     </main>
     <footer class="text-center">
         <p>&copy; 2024 Perpustakaan INKES</p>
-    </footer>
+    </footer> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+    // Ketika dokumen sudah siap
+    document.addEventListener("DOMContentLoaded", function() {
+      const links = document.querySelectorAll('a.nav-link');
+      const contentDiv = document.getElementById('content');
+
+      // Fungsi untuk memuat konten halaman yang diminta
+      function loadPage(url) {
+        fetch(url)
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Page not found');
+            }
+            return response.text();
+          })
+          .then(data => {
+            contentDiv.innerHTML = data;
+            updateActiveLink(url);
+          })
+          .catch(error => {
+            contentDiv.innerHTML = '<h2>Page not found</h2><p>Halaman yang Anda cari tidak ditemukan.</p>';
+            console.error(error);
+          });
+      }
+
+      // Fungsi untuk memperbarui link navbar yang aktif
+      function updateActiveLink(url) {
+        links.forEach(link => {
+          if (link.getAttribute('href') === url) {
+            link.parentElement.classList.add('active');
+          } else {
+            link.parentElement.classList.remove('active');
+          }
+        });
+      }
+
+      // Event listener untuk setiap link di navbar
+      links.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();  // Mencegah reload penuh halaman
+          const href = this.getAttribute('href');
+          loadPage(href);  // Muat konten halaman baru
+        });
+      });
+
+      // Muat halaman default (About)
+      loadPage('about.html');
+    });
+  </script>
+
 </body>
 </html>
