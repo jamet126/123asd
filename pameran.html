@@ -163,5 +163,111 @@
     <footer class="text-center">
         <p>&copy; 2024 Perpustakaan INKES</p>
     </footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+    // Ketika dokumen sudah siap
+    document.addEventListener("DOMContentLoaded", function() {
+      const links = document.querySelectorAll('a.nav-link');
+      const contentDiv = document.getElementById('content');
+
+      // Fungsi untuk memuat konten halaman yang diminta
+      function loadPage(url) {
+        fetch(url)
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Page not found');
+            }
+            return response.text();
+          })
+          .then(data => {
+            contentDiv.innerHTML = data;
+            updateActiveLink(url);
+          })
+          .catch(error => {
+            contentDiv.innerHTML = '<h2>Page not found</h2><p>Halaman yang Anda cari tidak ditemukan.</p>';
+            console.error(error);
+          });
+      }
+
+      // Fungsi untuk memperbarui link navbar yang aktif
+      function updateActiveLink(url) {
+        links.forEach(link => {
+          if (link.getAttribute('href') === url) {
+            link.parentElement.classList.add('active');
+          } else {
+            link.parentElement.classList.remove('active');
+          }
+        });
+      }
+
+      // Event listener untuk setiap link di navbar
+      links.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();  // Mencegah reload penuh halaman
+          const href = this.getAttribute('href');
+          loadPage(href);  // Muat konten halaman baru
+        });
+      });
+
+      // Muat halaman default (About)
+      loadPage('about.html');
+    }); 
+
+        const bookDetails = {
+    "ILMU BEDAH UNTUK PERAWAT": {
+        author: "M.A Henderson",
+        year: 1997,
+        description: "A comprehensive guide for nurses in surgical practices."
+    },
+    "Buku Saku Ilmu Penyakit Paru": {
+        author: "Halim Danususanto",
+        year: 2010,
+        description: "A pocket book covering lung diseases and their treatments."
+    },
+    "Urologic Disorders": {
+        author: "Mikel Gray",
+        year: 2009,
+        description: "A detailed overview of urological conditions and management."
+    },
+    "Buku Ajar Panthom Obstetri": {
+        author: "Ida Bagus Gede Manuba",
+        year: 2010,
+        description: "A reference book on obstetrics and gynecology."
+    },
+    "Endokrinologi Umum": {
+        author: "Turner",
+        year: 1988,
+        description: "A comprehensive text on endocrinology for medical students."
+    }
+};
+
+const detailButtons = document.querySelectorAll('.details-btn');
+const detailDiv = document.getElementById('book-detail');
+
+detailButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        const bookTitle = this.previousElementSibling.textContent.trim().replace(/"/g, ''); 
+
+        if (bookDetails[bookTitle]) {
+            const { author, year, description } = bookDetails[bookTitle];
+            detailDiv.innerHTML = `
+                <h4>Detail Buku: ${bookTitle}</h4>
+                <p><strong>Penulis:</strong> ${author}</p>
+                <p><strong>Tahun Terbit:</strong> ${year}</p>
+                <p><strong>Deskripsi:</strong> ${description}</p>
+            `;
+            detailDiv.style.display = 'block';
+        } else {
+            detailDiv.innerHTML = `<p>Detail untuk buku ini tidak tersedia.</p>`;
+            detailDiv.style.display = 'block';
+        }
+
+        detailDiv.classList.add('show-detail');
+    });
+});
+  </script>
+        
 </body>
 </html>
